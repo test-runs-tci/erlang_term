@@ -8,6 +8,7 @@ otp_release:
 #  - sudo apt install rebar
 before_script:
   - wget https://github.com/rebar/rebar/wiki/rebar
+  - sudo chmod +x ./rebar
 script: ./rebar compile eunit
 after_script:
   - ./rebar clean

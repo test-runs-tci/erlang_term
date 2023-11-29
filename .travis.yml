@@ -6,12 +6,12 @@ otp_release:
   - 24.3.1
 #before_install:
 #  - sudo apt install rebar
-before_script:
-  - wget https://github.com/rebar/rebar/wiki/rebar
-  - sudo chmod +x ./rebar
-script: ./rebar compile eunit
+#before_script:
+#  - wget https://github.com/rebar/rebar/wiki/rebar
+#  - sudo chmod +x ./rebar
+script: rebar3 compile eunit
 after_script:
-  - ./rebar clean
+  - rebar3 clean
 branches:
   only:
     - master
